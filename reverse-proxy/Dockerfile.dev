@@ -1,0 +1,3 @@
+FROM nginx:latest
+COPY ./conf/dev.conf /etc/nginx/confi.d/default.conf
+EXPOSE 80

@@ -1,0 +1,11 @@
+FROM node:lts-alpine
+WORKDIR /app
+COPY package.json .
+RUN npm set timeout=1000000
+RUN npm install
+#RUN npm i pm2 -g
+COPY . .
+CMD [ "npm", "start"]
+#CMD [ "pm2-runtime", "ecosystem.conf.js" ]
+EXPOSE 80
+ 
